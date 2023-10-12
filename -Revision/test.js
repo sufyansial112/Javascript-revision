@@ -36,5 +36,38 @@ newObject.greetings2 = function(){
 const obj1 = {1: 'a', 2:'b'}
 const obj2 = {3: 'a', 4:'b'}
 
-const obj3 = Object.assign({}, obj1, obj2)
-console.log(obj3)
+// const obj3 = Object.assign({}, obj1, obj2)
+// console.log(obj3)
+
+const obj3 = {...obj1, ...obj2}
+// console.log(obj3)
+
+const objInArr = [
+    {
+        id: 123,
+        name:'Sufyan'
+    },
+    {
+        id: 456,
+        name:'Sufyan'
+    },
+    {
+        id: 789,
+        name:'Sufyan'
+    }
+]
+// console.log(objInArr[0].id)
+
+const obj4 = Object.keys(obj1)
+// console.log(obj4)
+
+//Destructuring the object
+
+const myNewObject = {
+    name: "Sufyansiaal",
+    sex: "male",
+    age: 24
+}
+
+const {name: MaharSufyan, sex} = myNewObject
+console.log(MaharSufyan, sex)
