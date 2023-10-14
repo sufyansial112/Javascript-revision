@@ -70,4 +70,37 @@ const myNewObject = {
 }
 
 const {name: MaharSufyan, sex} = myNewObject
-console.log(MaharSufyan, sex)
+// console.log(MaharSufyan, sex)
+
+//Functions 
+
+const newFunction = function(username = "sufi"){
+    if (!username){
+    return `Please enter a user`
+    }
+return `${username} just logged in`
+
+}
+// console.log(newFunction())
+
+function valuesAre(...value){
+    return value
+}
+// console.log(valuesAre(200,300,400,500))
+
+const object1 = {
+    usernames: 'Sufyan and Ali',
+    id: 1 
+}
+
+function objectinFunc(anyObject){
+    return `the username is ${object1.usernames} and ids are ${object1.id}`
+} 
+console.log(objectinFunc(object1))
+
+const myArray = [12,13,14,15]
+
+function FunwithArray(myArray){
+    return `the number is ${myArray[1]} `
+}
+console.log(FunwithArray([43,45,56,78]))
