@@ -96,11 +96,33 @@ const object1 = {
 function objectinFunc(anyObject){
     return `the username is ${object1.usernames} and ids are ${object1.id}`
 } 
-console.log(objectinFunc(object1))
+// console.log(objectinFunc(object1))
 
 const myArray = [12,13,14,15]
 
 function FunwithArray(myArray){
     return `the number is ${myArray[1]} `
 }
-console.log(FunwithArray([43,45,56,78]))
+// console.log(FunwithArray([43,45,56,78]))
+
+
+  const  user1= {
+    name:"Sufyaaaaan",
+    designation: "Assistant",
+
+    welcomeMessage: function(){
+     console.log(`${this.name}, welcome to your destination`)
+    }
+    
+    }
+
+user1.welcomeMessage()
+user1.name = "ali"
+user1.welcomeMessage()
+
+const newUser2 = () => {
+    return (
+        console.log("this is a arrow function")
+    )
+}
+newUser2()
