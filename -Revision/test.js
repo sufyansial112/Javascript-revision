@@ -116,13 +116,25 @@ function FunwithArray(myArray){
     
     }
 
-user1.welcomeMessage()
-user1.name = "ali"
-user1.welcomeMessage()
+// user1.welcomeMessage()
+// user1.name = "ali"
+// user1.welcomeMessage()
 
 const newUser2 = () => {
     return (
         console.log("this is a arrow function")
     )
 }
-newUser2()
+// newUser2()
+
+// IIFE - immediately invoked function expression
+
+( function Chai(name){
+    console.log(` ${name} DB is connected one` )
+})('Sufyan');
+
+( () => {
+    console.log('Db 2 is also connected')
+}
+
+)()
