@@ -138,3 +138,25 @@ const newUser2 = () => {
 }
 
 )()
+
+// Switch statement
+
+const  number = 3
+
+switch (number) {
+    case 1:
+        console.log('not given')
+        break;
+    case 2:
+        console.log('not given')
+        break;
+    case 3:
+        console.log('number 3')
+        break;
+    case 1:
+        console.log('not given')
+        break;
+
+    default:
+        break;
+}
