@@ -130,11 +130,11 @@ const newUser2 = () => {
 // IIFE - immediately invoked function expression
 
 ( function Chai(name){
-    console.log(` ${name} DB is connected one` )
+    // console.log(` ${name} DB is connected one` )
 })('Sufyan');
 
 ( () => {
-    console.log('Db 2 is also connected')
+    // console.log('Db 2 is also connected')
 }
 
 )()
@@ -151,7 +151,7 @@ switch (number) {
         console.log('not given')
         break;
     case 3:
-        console.log('number 3')
+        // console.log('number 3')
         break;
     case 1:
         console.log('not given')
@@ -159,4 +159,27 @@ switch (number) {
 
     default:
         break;
+}
+
+// for loop
+//Printing ttable
+
+for (let i = 1; i <= 3; i++) {
+    const element = [i];
+    // console.log(element)
+    for (let j = 1; j <= 10; j++) {
+        // console.log(`${element} * ${j} = ${element * j}`)
+        
+    }
+    
+}
+// break and continue
+
+for (let i = 0; i <=10; i++) {
+    const element = i
+    if (element == 5){
+        console.log('5 dedected')
+        continue
+    }
+    console.log(element)
 }
