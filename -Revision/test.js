@@ -178,8 +178,47 @@ for (let i = 1; i <= 3; i++) {
 for (let i = 0; i <=10; i++) {
     const element = i
     if (element == 5){
-        console.log('5 dedected')
+        // console.log('5 dedected')
         continue
     }
-    console.log(element)
+    // console.log(element)
+}
+
+// for of loop 
+
+const arr = [1,2,3,4,5]
+
+for (const array of arr) {
+    // console.log(array)
+}
+
+const greetings = "hello world"
+
+for (const greet of greetings) {
+    if(greet === " "){
+        break;
+    }
+    // console.log(greet)
+
+}
+
+const map = new Map()
+
+map.set('Pk' , "Pakistan")
+map.set('ban' , "bangladesh")
+
+// console.log(map)
+
+for (const [key, value] of map){
+    // console.log(key, "-", value)
+}
+
+// for in loop
+
+const myobject= {
+    name: " Sufyan",
+    Sex: "male"
+}
+for (const key in myobject) {
+ console.log(`${key} is  ${myobject[key]}`)  
 }
