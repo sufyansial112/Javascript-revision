@@ -220,5 +220,39 @@ const myobject= {
     Sex: "male"
 }
 for (const key in myobject) {
- console.log(`${key} is  ${myobject[key]}`)  
+//  console.log(`${key} is  ${myobject[key]}`)  
 }
+// Filter map and reduce
+
+const ArrEach = [1,2,3,4,5,6,7]
+
+const newArrEach = ArrEach.forEach((item) => {
+    console.log( item)
+})
+// console.log(newArrEach)
+
+const pushArr = []
+const arrtoPush = [1,2,3,4,5,6,7,8]
+arrtoPush.forEach((num) => {
+    if(num > 4){
+        pushArr.push(num)
+    }}
+)
+// console.log(pushArr)
+
+const arrytoPushe = [1,2,3,4,5,6,78,99,44,55,90,86]
+
+const filteredArr = arrytoPushe.filter((num) => {
+    return num > 50 
+})
+// console.log(filteredArr)
+
+// MAp method
+
+const arrarr = [1,2,3,4,5,6,7,8,9,10]
+
+const arrmaparr = arrarr
+.map((num)=>num * 10)
+.map((num) => num + 1)
+.filter((num) => num < 55)
+console.log(arrmaparr)
