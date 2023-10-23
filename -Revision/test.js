@@ -255,4 +255,31 @@ const arrmaparr = arrarr
 .map((num)=>num * 10)
 .map((num) => num + 1)
 .filter((num) => num < 55)
-console.log(arrmaparr)
+// console.log(arrmaparr)
+
+//reduce method
+
+const arrreduced = [1,23,45,43,12]
+
+const reducerss = arrreduced.reduce((acc,currval) => {
+    return acc + currval }, 0)
+    console.log(reducerss)
+
+    const shoppingCart = [{
+        name: "javascript course",
+        price: 1234
+    },{
+        name: "python course",
+        price: 1500
+    },{
+        name: "react course",
+        price: 2604
+    },{
+        name: "vue course",
+        price: 4500
+    }]
+
+    const newShopCart = shoppingCart.reduce((acc, currval) => {
+        return acc + currval.price
+    },0)
+    console.log(newShopCart)
