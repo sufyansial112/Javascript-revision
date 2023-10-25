@@ -35,4 +35,55 @@ title.innerHTML
 provides us with the complete html element
 -->
 
+<!-- new document object model practise -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: black; color: #fff;">
+  
+
+<div class="parent">
+  <div class="day">Monday</div>
+  <div class="day">Tuesday</div>
+  <div class="day">Wednesday</div>
+  <div class="day">Thursday</div>
+
+</div>
+
+</body>
+
+<script>
+//************** selecting an element  ****************
+
+// const parent = document.querySelector('.parent')
+// console.log(parent)
+// console.log(parent.children)
+
+//   for (let i = 0; i< parent.children.length; i++) {
+//     // console.log(parent.children[i].innerHTML)
+//   }
+//   parent.children[1].style.color = 'green'
+
+  //************* creating an element *******************
+
+const element1 = document.createElement('div')
+console.log(element1)
+element1.className = 'sufi'
+element1.id = Math.round(Math.random() * 10 + 1)
+element1.style.backgroundColor = 'green'
+element1.style.padding = '12px'
+element1.setAttribute('TITLE', 'GENERATED TITLE')
+
+// element1.innerText = 'Chai aur Code'
+ const addElement = document.createTextNode('Chai aur code')
+
+   element1.appendChild(addElement)
+
+  document.body.appendChild.element1
+</script>
+</html>
