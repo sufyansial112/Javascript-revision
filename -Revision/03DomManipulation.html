@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur code</title>
+  </head>
+  <body style="background-color: black; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    const element = document.querySelector(".language");
+
+    const addingElement = function (newlang) {
+      const li = document.createElement("li");
+      li.innerHTML = `${newlang}`;
+
+      element.appendChild(li);
+    };
+    console.log(addingElement("python"));
+
+    //Adding element in an optimized way
+
+    function addElement(languages) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(languages));
+      document.querySelector(".language").appendChild(li);
+    }
+    addElement("React");
+  </script>
+</html>
