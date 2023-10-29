@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: #fff"></body>
+  <script>
+    const newElement = document.createElement("div");
+    console.log(newElement);
+
+    newElement.className = "class";
+    newElement.id = "id";
+    const h1 = document.createElement("h1");
+    newElement.appendChild(h1);
+    const h1Content = document.createTextNode("chai aur code");
+    h1.appendChild(h1Content);
+    newElement.style.backgroundColor = "green";
+    newElement.style.padding = "12px";
+
+    const appendElement = document.body.appendChild(newElement);
+  </script>
+</html>
