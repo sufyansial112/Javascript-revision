@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.h1 {
+  color: #333;
+}
+.button {
+  padding: 2rem 2rem;
+}
+#green {
+  background-color: green;
+}
+#black {
+  background-color: black;
+}
+#brown {
+  background-color: brown;
+}
+#blue {
+  background-color: blue;
+}
