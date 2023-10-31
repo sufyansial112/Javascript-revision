@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  color: purple;
+  background-color: antiquewhite;
+}
 .h1 {
   color: #333;
 }
