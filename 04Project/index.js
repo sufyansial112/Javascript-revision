@@ -5,6 +5,9 @@ const PreGuess = document.querySelector("#pre-guess");
 const remGuess = document.querySelector("#rem-guess");
 const message = document.querySelector("#message");
 
+const randomNUmber = parseInt(Math.random() * 100 + 1);
+console.log(randomNUmber);
+
 const p = document.createElement("p");
 
 const prevGuess = [];
@@ -28,12 +31,26 @@ function validateGuess(guess) {
   } else if (guess > 100) {
     alert("please enter a  number between 1 and 100");
   } else {
-    displayGuess(guess);
-    displayMessage(message);
+    prevGuess.push(guess);
+    if (guess === 11) {
+      displayGuess(guess);
+      displayMessage(`the random number was ${randomNUmber}`);
+      endGame();
+    } else {
+      displayGuess(guess);
+      checkGuess(guess);
+    }
   }
 }
 function checkGuess(guess) {
-  //
+  if (guess === randomNUmber) {
+    message.innerHTML = "You guessed it right";
+    endGame();
+  } else if (guess < randomNUmber) {
+    message.innerHTML = "the guess is too low";
+  } else if (guess > randomNUmber) {
+    message.innerHTML = "the guess is too high";
+  }
 }
 function displayGuess(guess) {
   //
