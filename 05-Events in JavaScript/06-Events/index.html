@@ -58,8 +58,45 @@
     </div>
   </body>
   <script>
-    document.getElementById("owl").onclick = function () {
-      alert("owl");
-    };
+    // document.getElementById("owl").onclick = function () {
+    //   alert("owl");
+    // };
+
+    // Event propagation
+    // bubble one which goes from bottom to the top. when its false
+    // it goes from bottom to top. meaning first owl will be clicked then ul
+    // when it is true (3rd parameter) then capturing comes into occur which follows top to bottom approach meaning firstly ul will be clicked and then li
+    document.getElementById("owl").addEventListener(
+      "click",
+      function () {
+        alert("owl clicked again");
+      },
+      false
+    );
+
+    document.getElementById("images").addEventListener(
+      "click",
+      function () {
+        alert("clicked inside the ul");
+      },
+      false
+    );
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove(removeIt);
+      }
+    });
+
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log(alert("google clicked"));
+      },
+      true
+    );
   </script>
 </html>
