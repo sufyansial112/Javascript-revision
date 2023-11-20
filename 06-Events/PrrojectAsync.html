@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai kay sath code</h1>
+    <button class="stop">Stop</button>
+    <button class="start">Start</button>
+
+    <script>
+      // const randomNumber = Math.floor(Math.random() * 16);
+      // console.log(randomNumber);
+
+      const randomColor = function () {
+        hexValue = "0123456789ABCDEF";
+        color = "#";
+
+        for (let i = 0; i < 6; i++) {
+          color += hexValue[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        console.log(color);
+      };
+
+      const stopBtn = document.querySelector(".stop");
+      const startBtn = document.querySelector(".start");
+
+      let settingInterval;
+
+      const StartchangeBgColor = function () {
+        function randomBgColor() {
+          document.body.style.backgroundColor = randomColor();
+        }
+        if (!settingInterval) {
+          settingInterval = setInterval(randomBgColor, 1000);
+        }
+      };
+
+      const StopChangeBgColor = function () {
+        clearInterval(settingInterval);
+        settingInterval = null;
+      };
+
+      startBtn.addEventListener("click", StartchangeBgColor);
+      stopBtn.addEventListener("click", StopChangeBgColor);
+    </script>
+  </body>
+</html>
