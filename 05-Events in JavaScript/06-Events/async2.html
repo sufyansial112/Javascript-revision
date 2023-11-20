@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai kay sath code</h1>
+    <button class="stop">Stop</button>
+    <button class="start">Start</button>
+
+    <script>
+      const stopBtn = document.querySelector(".stop");
+      const startBtn = document.querySelector(".start");
+
+      startBtn.addEventListener("click", function () {
+        const dateIs = function () {
+          console.log("sufyan", Date.now());
+        };
+
+        const SettingInterval = setInterval(dateIs, 2000);
+
+        stopBtn.addEventListener("click", function () {
+          clearInterval(SettingInterval);
+        });
+      });
+    </script>
+  </body>
+</html>
