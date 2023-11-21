@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>key code</title>
+  </head>
+  <body>
+    <div class="project">
+      <div class="table">
+        <div class="p">press any key to see magic</div>
+      </div>
+    </div>
+
+    <style>
+      .p {
+        color: aqua;
+        text-align: center;
+        align-items: center;
+        margin-top: 50%;
+      }
+      .color {
+        color: aliceblue;
+        display: flex;
+        flex-direction: row;
+      }
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+
+    <script>
+      const para = document.querySelector(".p");
+      let table = document.querySelector(".table");
+
+      window.addEventListener("keydown", function (e) {
+        console.log(e);
+        table.innerHTML = `
+            
+              <table>
+        <tr>
+          <td>Key</td>
+          <td>KeyCode</td>
+          <td>Code</td>
+        </tr>
+        <tr>
+          <td>${e.key === " " ? "space" : e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+      
+
+              `;
+      });
+    </script>
+  </body>
+</html>
