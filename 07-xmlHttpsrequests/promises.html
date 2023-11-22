@@ -93,10 +93,10 @@
 
       fetch("https://api.github.com/users/hiteshchoudhary")
         .then((response) => {
-          response.json();
+          return response.json();
         })
-        .then((data) => {
-          console.log(data);
+        .then((dataa) => {
+          console.log(dataa);
         })
         .catch((error) => {
           console.log(error);
