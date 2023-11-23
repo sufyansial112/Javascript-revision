@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // printing tablr for practise
+      // const num = 5;
+
+      // for (let i = 1; i < 11; i++) {
+      //   console.log(` ${num} * ${i}  =  ${num * i}`);
+      // }
+
+      // object literal and other properties
+
+      const newFunction = function num(num) {
+        const newNum = 2 * num;
+        return newNum;
+      };
+      console.log(newFunction(5));
+
+      const createUser = function (user, score) {
+        this.user = "Sufyan";
+        this.score = 20;
+      };
+
+      createUser.prototype.increment = function () {
+        console.log(`the score is ${this.score}`);
+      };
+
+      createUser.prototype.print = function () {
+        console.log(` the toatal score of sufyan is ${this.user}`);
+      };
+
+      const Sufyan = new createUser("Sufi", 25);
+
+      Sufyan.print();
+      Sufyan.increment();
+    </script>
+  </body>
+</html>
