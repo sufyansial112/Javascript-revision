@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let heros = ["Thor", "Spiderman"];
+
+      let heroPowers = {
+        Thor: "hammer",
+        spiderman: "sling",
+
+        powersofHeros: function () {
+          console.log(` spider has ${this.spiderman} power`);
+        },
+      };
+      console.log(heroPowers.powersofHeros());
+
+      Object.prototype.Sufyan = function () {
+        console.log("Sufyan is in all objects");
+      };
+
+      heroPowers.Sufyan();
+      heros.Sufyan();
+
+      Array.prototype.hiSufyan = function () {
+        console.log("sufyan says hello");
+      };
+
+      heros.hiSufyan();
+      // heroPowers.hiSufyan(); this will give an error because this power is only accessible by
+      // arrays buyt not the object. Only the peotype value given to an object is accessible by
+      // Arrays functions and objects
+
+      // Inheritance
+
+      const USer = {
+        username: "Sufyan Sial",
+        email: "Sufyan112@gmail.com",
+      };
+
+      const teacher = {
+        PHD: true,
+        fullTime: true,
+      };
+
+      const TeacherAssistant = {
+        available: false,
+
+        // __prot__: USer, to give value of user to TeacherAssistant
+      };
+
+      teacher.__proto__ = USer;
+      console.log(teacher);
+
+      // NEW way of inheritance
+
+      Object.setPrototypeOf(teacher, TeacherAssistant);
+
+      const anotherUser = "Sufyan    ";
+
+      String.prototype.trueLength = function () {
+        console.log(`the true length of anotheruser is ${this.trim().length}`);
+      };
+
+      anotherUser.trueLength();
+
+      const newUser = "hitesh  ";
+      newUser.trueLength();
+
+      "chaiandsamosa".trueLength();
+    </script>
+  </body>
+</html>
