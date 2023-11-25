@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class User {
+      //   constructor(username, email, pass) {
+      //     this.username = username;
+      //     this.email = email;
+      //     this.pass = pass;
+      //   }
+
+      //   encryptPassword() {
+      //     return `the encrypted pass is ${this.pass}abc`;
+      //   }
+
+      //   changeUsername() {
+      //     console.log(`the changes username is ${this.username.toUpperCase()}`);
+      //   }
+      // }
+
+      // const chai = new User("Sufyan", "Sufyan123@gmiaj.com", 123);
+
+      // console.log(chai.encryptPassword());
+      // chai.changeUsername();
+
+      // behind the scene
+
+      function User(username, email, pass) {
+        this.username = username;
+        this.email = email;
+        this.pass = pass;
+      }
+
+      User.prototype.encryptPassword = function () {
+        return `the encrypted pass is ${this.pass}abc`;
+      };
+
+      const tea = new User("Sufyan", "Sufyan123@gmiaj.com", 123);
+      console.log(tea.encryptPassword());
+
+      // inheritance
+
+      class myUser {
+        constructor(username) {
+          this.username = username;
+        }
+      }
+
+      class teacher extends myUser {
+        constructor(username, email, pass) {
+          super(username);
+          this.email = email;
+          this.pass = pass;
+        }
+
+        teacherUser() {
+          console.log(`teacher username is ${this.username}`);
+        }
+      }
+
+      const chaiAurCode = new teacher("sufyan");
+      const masalaChai = new teacher("hitesh");
+      chaiAurCode.teacherUser();
+      masalaChai.teacherUser();
+      // masalaChai.teacher();
+    </script>
+  </body>
+</html>
